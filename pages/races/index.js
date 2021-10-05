@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import axios from 'axios';
 
-import { Heading } from '../../components/heading/heading';
+import { Heading } from '../../components/styled/typography/heading';
 
 const getServerSideProps = async () => {
     const { data } = await axios.get('https://www.dnd5eapi.co/api/races');

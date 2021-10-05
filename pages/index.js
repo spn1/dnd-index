@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import axios from 'axios';
 
-import { Heading } from '../components/heading/heading';
+import { Heading } from '../components/styled/typography/heading';
 
 export default function Home({ data }) {
   return (
