@@ -2,23 +2,29 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
     :root {
-        --color-primary: #eb2f64;
-        --color-primary-light: #FF3366;
-        --color-primary-dark: #BA265D;
+        --color-primary: #E63946;
+        --color-primary-light: #E63946;
+        --color-primary-dark: #DA1B2B;
 
-        --color-grey-light-1: #faf9f9;
-        --color-grey-light-2: #f4f2f2;
-        --color-grey-light-3: #f0eeee;
-        --color-grey-light-4: #ccc;
+        --color-light-background: #DDD;
+        --color-light-background-light: #FFF;
+        --color-light-background-dark: #EEE;
 
-        --color-grey-dark-1: #333;
-        --color-grey-dark-2: #777;
-        --color-grey-dark-3: #999;
+        --color-dark-background: #111;
+        --color-dark-background-light: #222;
+        --color-dark-background-dark: #000;
 
-        --shadow-dark: 0 2rem 6rem rgba(0,0,0,.3);
-        --shadow-light: 0 2rem 5rem rgba(0,0,0,.06);
+        --color-dark-text-primary: #FFF;
+        --color-light-text-primary: #000;
 
-        --line: 1px solid var(--color-grey-light-2);
+        --heading-size-x-large: 16rem;
+        --heading-size-large: 12rem;
+        --heading-size-medium: 10rem;
+        --heading-size-small: 6rem;
+
+        --font-size-large: 2.0rem;
+        --font-size-medium: 1.8rem;
+        --font-size-small: 1.4rem;
     }
 
     * {
@@ -42,12 +48,13 @@ const GlobalStyle = createGlobalStyle`
     }
 
     body {
-        font-family: 'Open Sans', sans-serif;
+        background: ${({ theme }) => theme.color.background};
+
+        color: ${({ theme }) => theme.color['text-primary']};
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 1.6rem;
         font-weight: 400;
         line-height: 1.6;
-        background-image: palevioletred;
-        background-size: cover;
-        background-repeat: no-repeat;
 
         min-height: 100vh;
     }
