@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import axios from 'axios';
 
-import { Heading } from '../../components/styled/typography/heading';
+import { Title } from '../../components/styled/typography/title';
 
 const getServerSideProps = async () => {
     const { data } = await axios.get('https://www.dnd5eapi.co/api/monsters');
@@ -21,7 +21,7 @@ export default function Monsters({ data }) {
             </Head>
 
             <main>
-                <Heading>Monsters</Heading>
+                <Title>Monsters</Title>
                 {results.map(({ name }, index) => (
                     <h3 key={`monster-${index}`}>{name}</h3>
                 ))}

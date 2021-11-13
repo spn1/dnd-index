@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import axios from 'axios';
 
-import { Heading } from '../../components/styled/typography/heading';
+import { Title } from '../../components/styled/typography/title';
 
 const getServerSideProps = async () => {
     const { data } = await axios.get('https://www.dnd5eapi.co/api/races');
@@ -20,7 +20,7 @@ export default function Races({ data: { results } }) {
             </Head>
 
             <main>
-                <Heading>Races</Heading>
+                <Title>Races</Title>
                 {results.map(({ name }, index) => (
                     <h3 key={`races-${index}`}>{name}</h3>
                 ))}
