@@ -25,6 +25,17 @@ const GlobalStyle = createGlobalStyle`
         --font-size-large: 2.0rem;
         --font-size-medium: 1.8rem;
         --font-size-small: 1.4rem;
+
+        --spacing-xlarge: 2.4rem;
+        --spacing-large: 2.0rem;
+        --spacing-medium: 1.6rem;
+        --spacing-small: 1.2rem;
+        --spacing-xsmall: 0.8rem;
+
+        --breakpoint-mobile: calc(480px);
+        --breakpoint-tablet: 768px;
+        --breakpoint-desktop: calc(1080px);
+        --breakpoint-widescreen: calc(1280px);
     }
 
     * {
@@ -42,7 +53,7 @@ const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
         font-size: 62.5%; // 1rem = 10px, 10px/16px = 62.5%
 
-        @media only screen and (max-width: $bp-large) {
+        @media only screen and (max-width: var(--breakpoint-desktop)) {
             font-size: 50%;
         }
     }

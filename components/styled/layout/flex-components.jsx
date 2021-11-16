@@ -16,7 +16,7 @@ const FlexBox = styled.div`
 
     & > * {
         padding: 0 2rem;
-        border: 1px solid palevioletred;
+        /* border: 1px solid palevioletred; */
         cursor: pointer;
     }
 `

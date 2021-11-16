@@ -1,17 +1,17 @@
-import React, { Fragment, useState } from 'react';
+import React, { useState } from 'react';
 
 import { ThemeProvider } from 'styled-components';
 import { Masthead } from './masthead';
 
-import { light, dark } from '../styled/global/themes';
+import { lightTheme, darkTheme } from '../styled/global/themes';
 import { PageContainer } from '../styled/layout/page-container';
 import { GlobalStyle } from '../styled/global/global-style';
 
 const Layout = ({ children }) => {
-    const [theme, setTheme] = useState(dark);
+    const [theme, setTheme] = useState(darkTheme);
 
     const toggleTheme = () => {
-        setTheme(theme.name === dark.name ? light : dark);
+        setTheme(theme.name === darkTheme.name ? lightTheme : darkTheme);
     }
 
     return (

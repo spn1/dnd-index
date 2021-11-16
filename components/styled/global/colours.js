@@ -1,8 +1,3 @@
-/*
- * Things to keep in themes:
- *  - Colours
- */
-
 const light = {
     name: 'light',
     color: {
@@ -30,4 +25,3 @@ const dark = {
 };
 
 export { light, dark }
-
