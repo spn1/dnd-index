@@ -16,7 +16,6 @@ const commonTheme = {
 
 const lightTheme = { ...commonTheme, ...light};
 const darkTheme = { ...commonTheme, ...dark};
-console.log(lightTheme);
 
 export { lightTheme, darkTheme }
 

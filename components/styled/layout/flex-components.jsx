@@ -13,12 +13,6 @@ const FlexBox = styled.div`
     width: 100%;
     height: 100%;
     min-height: inherit;
-
-    & > * {
-        padding: 0 2rem;
-        /* border: 1px solid palevioletred; */
-        cursor: pointer;
-    }
 `
 
 const FlexItem = styled.div`

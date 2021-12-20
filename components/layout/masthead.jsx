@@ -1,7 +1,7 @@
 import React from 'react';
-import Link from 'next/link';
 import { ThemeToggler } from './theme-toggler';
 import { NavBar } from '../styled/layout/nav-bar';
+import { NavLink } from '../styled/layout/nav-link';
 import { PageContainer } from '../styled/layout/page-container';
 import { FlexBox, FlexItem } from '../styled/layout/flex-components';
 
@@ -10,27 +10,19 @@ const Masthead = ({ toggleTheme }) => (
             <PageContainer max-height>
                 <FlexBox justify-content='space-between' align-items='stretch'>
                     <FlexItem>
-                        <FlexBox align-items='center'>
-                            <Link href="/">
-                                <a>
-                                    INDEX
-                                </a>
-                            </Link>
-                            <Link href="/monsters">
-                                <a>
-                                    MONSTERS
-                                </a>
-                            </Link>
-                            <Link href="/classes">
-                                <a>
-                                    CLASSES
-                                </a>
-                            </Link>
-                            <Link href="/races">
-                                <a>
-                                    RACES
-                                </a>
-                            </Link>
+                        <FlexBox align-items='flex-end'>
+                            <NavLink href="/">
+                                INDEX
+                            </NavLink>
+                            <NavLink href="/monsters">
+                                MONSTERS
+                            </NavLink>
+                            <NavLink href="/classes">
+                                CLASSES
+                            </NavLink>
+                            <NavLink href="/races">
+                                RACES
+                            </NavLink>
                         </FlexBox>
                     </FlexItem>
                     <FlexItem align-self='center'>
