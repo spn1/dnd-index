@@ -1,7 +1,7 @@
 import React from 'react';
 import { ThemeToggler } from './theme-toggler';
-import { NavBar } from '../styled/layout/nav-bar';
-import { NavLink } from '../styled/layout/nav-link';
+import { NavBar } from '../styled/nav/nav-bar';
+import { NavLink } from '../styled/nav/nav-link';
 import { PageContainer } from '../styled/layout/page-container';
 import { FlexBox, FlexItem } from '../styled/layout/flex-components';
 
@@ -25,7 +25,7 @@ const Masthead = ({ toggleTheme }) => (
                             </NavLink>
                         </FlexBox>
                     </FlexItem>
-                    <FlexItem align-self='center'>
+                    <FlexItem align-self='flex-end'>
                         <ThemeToggler toggleTheme={toggleTheme} />
                     </FlexItem>
                 </FlexBox>

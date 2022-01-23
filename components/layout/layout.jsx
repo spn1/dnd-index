@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 import { ThemeProvider } from 'styled-components';
 import { Masthead } from './masthead';
+import { Banner } from '../styled/banner/banner';
 
 import { lightTheme, darkTheme } from '../styled/global/themes';
 import { PageContainer } from '../styled/layout/page-container';
@@ -18,7 +19,9 @@ const Layout = ({ children }) => {
         <>
             <GlobalStyle theme={theme} />
             <ThemeProvider theme={theme}>
-                <Masthead toggleTheme={toggleTheme} />
+                <Banner>
+                    <Masthead toggleTheme={toggleTheme} />
+                </Banner>
                 <PageContainer>
                     {children}
                 </PageContainer>

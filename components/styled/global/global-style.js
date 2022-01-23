@@ -62,8 +62,8 @@ const GlobalStyle = createGlobalStyle`
         background: ${({ theme }) => theme.color.background};
 
         color: ${({ theme }) => theme.color['text-primary']};
-        font-family: 'Ubuntu', sans-serif;
-        font-size: 1.6rem;
+        font-family: 'Poppins', sans-serif;
+        font-size: 2.0rem;
         font-weight: 400;
         line-height: 1.6;
 

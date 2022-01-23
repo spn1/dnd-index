@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 const HeaderLink = styled.a`
     padding: ${({ theme }) => `${theme.spacing.xsmall} ${theme.spacing.medium}`};
-    background-color: ${({ theme }) => theme.color['background-light']};
+    background-color: ${({ theme }) => theme.color.background};
     border-radius: 5px 5px 0 0;
 
     :visited {
