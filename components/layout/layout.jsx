@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 
 import { ThemeProvider } from 'styled-components';
-import { Masthead } from './masthead';
-import { Banner } from '../styled/banner/banner';
+import { Masthead } from '../nav/masthead';
+import { Banner } from '../banner/banner';
 
-import { lightTheme, darkTheme } from '../styled/global/themes';
-import { PageContainer } from '../styled/layout/page-container';
-import { GlobalStyle } from '../styled/global/global-style';
+import { lightTheme, darkTheme } from '../global/themes';
+import { PageContainer } from '../container/page-container';
+import { GlobalStyle } from '../global/global-style';
 
 const Layout = ({ children }) => {
-    const [theme, setTheme] = useState(darkTheme);
+    const [theme, setTheme] = useState(lightTheme);
 
     const toggleTheme = () => {
         setTheme(theme.name === darkTheme.name ? lightTheme : darkTheme);

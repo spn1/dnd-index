@@ -2,21 +2,6 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
     :root {
-        --color-primary: #E63946;
-        --color-primary-light: #E63946;
-        --color-primary-dark: #DA1B2B;
-
-        --color-light-background: #DDD;
-        --color-light-background-light: #FFF;
-        --color-light-background-dark: #EEE;
-
-        --color-dark-background: #111;
-        --color-dark-background-light: #222;
-        --color-dark-background-dark: #000;
-
-        --color-dark-text-primary: #FFF;
-        --color-light-text-primary: #000;
-
         --heading-size-x-large: 16rem;
         --heading-size-large: 12rem;
         --heading-size-medium: 10rem;
@@ -59,15 +44,29 @@ const GlobalStyle = createGlobalStyle`
     }
 
     body {
-        background: ${({ theme }) => theme.color.background};
+        background: ${({ theme }) => theme.color['background-default']};
 
         color: ${({ theme }) => theme.color['text-primary']};
-        font-family: 'Poppins', sans-serif;
-        font-size: 2.0rem;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.8rem;
         font-weight: 400;
-        line-height: 1.6;
+        text-align: justify;
+        line-height: 1.2;
 
         min-height: 100vh;
+    }
+
+    h1, h2, h3, h4 {
+        margin-top: 2rem;
+        text-decoration: underline;
+    }
+
+    p {
+        margin-top: 0.8rem;
+
+        & + p {
+            margin-top: 1rem;
+        }
     }
 `;
 

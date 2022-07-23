@@ -2,8 +2,6 @@ import React from 'react';
 import Head from 'next/head';
 import axios from 'axios';
 
-import { Title } from '../../components/styled/typography/title';
-
 const getServerSideProps = async () => {
     const { data } = await axios.get('https://www.dnd5eapi.co/api/classes');
 
@@ -20,9 +18,9 @@ export default function Classes({ data: { results } }) {
             </Head>
 
             <main>
-                <Title>Classes</Title>
-                {results.map(({ name }, index) => (
-                    <h3 key={`class-${index}`}>{name}</h3>
+                <h1>Classes</h1>
+                {results.map(({ name }) => (
+                    <h3 key={`class-${name}`}>{name}</h3>
                 ))}
             </main>
         </div>
